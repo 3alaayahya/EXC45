@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Instructors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="ajaxCalls.js"></script>-->
+    <script src="ajaxCalls2.js"></script>
+    <link href="css/InstructorsCSS.css" rel="stylesheet" />
+    <!--<script src="JS/index.js"></script>-->
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a id="myCoursesBtn">My courses</a>
+        <a href="#" id="loginBtn">Login</a>
+        <a href="#" id="logoutBtn">Logout</a>
+        <a id="adminPage">Admin</a>
+        <p id="hiUser"></p>
+    </div>
+    <div id="instructors-list"></div>
+
+    <!-- Modal to show instructor's courses -->
+    <div id="instructorCoursesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="instructorCoursesForm">
+                <!-- Courses will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JS/Intructorjs.js"></script>
+</body>
+</html>

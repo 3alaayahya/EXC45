@@ -1,0 +1,343 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+
+    #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+/* Searchbar Styles */
+#searchbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top:85px;
+}
+
+.search-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#searchbar label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#searchbar input[type="number"],
+#searchbar select {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchbar button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #searchbar button:hover {
+        background-color: #0056b3;
+    }
+
+#top-courses {
+    width: 100%;
+    margin: 10px;
+    margin-top: 55px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f9f9f9;
+}
+
+.Topcourses {
+    width: 30%;
+    margin: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f9f9f9;
+}
+
+    .Topcourses h2 {
+        font-size: 25px;
+        color: midnightblue;
+    }
+
+#moreCourses{
+    margin-left:20px;
+}
+/* Course Styles */
+.course {
+    width: 30%;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f9f9f9;
+}
+
+.course h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.add-course, .delete-course {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+    .add-course:hover, .delete-course:hover {
+        background-color: #0056b3;
+    }
+
+.course img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+#reset{
+    margin-top:25px;
+}
+/*//////////////////////////////////////////////////////////*/
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 600px;
+}
+
+    .modal-content h2 {
+        margin-top: 0;
+    }
+
+    .modal-content .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .modal-content .close:hover {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+.more-courses {
+    border: 1px solid #ddd; /* Slight border */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+    .more-courses img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        max-height: 300px; /* Optional: Set a max height if needed */
+    }
+
+    .course {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .course h3 {
+        margin-top: 0;
+    }
+
+    .course p {
+        margin-bottom: 5px;
+    }
+
+
+/* Add some styles for the login/register modal */
+#loginModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+#loginModalContent {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+#registerFormContainer {
+    display: none;
+}
+
+.toggle-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Style labels and buttons */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+.toggle-link {
+    margin-top: 10px;
+}
+
+#logoutBtn{
+    display:none;
+    float:right;
+}
+
+#hiUser,p{
+    display:none;
+    font-size: 20px;
+    color:white;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    border: 1px solid red;
+    padding: 5px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+}
+
+.show-more-courses {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit; /* Inherit font properties from parent to make it look like regular text */
+    padding: 0;
+    color: darkblue; 
+    font-weight: bold;
+}
+
+

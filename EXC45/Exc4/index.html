@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="ajaxCalls.js"></script>
+    <link href="css/index_myCoursescss.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="navbar">
+        <a id="myCoursesBtn">My courses</a>
+        <a href="instructorsPage.html">Instructors</a>
+        <a href="#" id="loginBtn">Login</a>
+        <a href="#" id="logoutBtn">Logout</a>
+        <a id="adminPage">Admin</a>
+        <p id="hiUser"></p>
+    </div>
+
+    <div id="top-courses">
+        <div id="top-course-list"></div>
+    </div>
+
+    <!-- Modal form for instructor courses-->
+    <div id="instructorCoursesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="instructorCoursesForm">
+                <!-- Courses will be dynamically added here -->
+            </form>
+        </div>
+    </div>
+
+    <div id="course-list">
+        <h1 id="moreCourses">More Courses:</h1>
+    </div>
+
+    <div id="loginModal">
+        <div id="loginModalContent">
+            <span class="close">&times;</span>
+            <div id="loginFormContainer">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                    <br>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <br>
+                    <span>You dont have an account? </span>
+                    <span class="toggle-link" id="showRegisterForm"> Register</span>
+                </form>
+            </div>
+            <div id="registerFormContainer">
+                <form id="registerForm">
+                    <h2>Register</h2>
+                    <label for="registerName">Name:</label>
+                    <input type="text" id="registerName" name="registerName" required>
+                    <br>
+                    <label for="registerId">Id:</label>
+                    <input type="text" id="registerId" name="registerId" required>
+                    <br>
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required>
+                    <br>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+                    <br>
+                    <button type="submit">Register</button>
+                    <br>
+                    <span>You have an account? </span>
+                    <span class="toggle-link" id="showLoginForm"> Back to Login</span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+
+</body>
+</html>

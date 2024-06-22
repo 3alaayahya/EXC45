@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+
+    <link href="css/index_myCoursescss.css" rel="stylesheet" />
+    <link href="css/admincss.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a id="myCoursesBtn">My courses</a>
+        <a href="instructorsPage.html">Instructors</a>
+        <a href="#" id="logoutBtn">Logout</a>
+        <p id="hiUser"></p>
+    </div>
+    <div id="buttons-container">
+        <button id="quickEditBtn">Edit in dataTable</button>
+        <button id="insertCourseBtn">Insert New Course</button>
+    </div>
+
+    <div>
+        <input list="courses" id="courseDatalist" placeholder="Select a course to edit">
+        <button id="editCourseBtn">Edit course</button>
+        <datalist id="courses"></datalist>
+    </div>
+    <br />
+    <br />
+
+    <div id="editcourseFromList" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editCourseFromListForm">
+                <input type="hidden" id="editCourseId">
+                <label>Title:</label>
+                <input type="text" id="editCourseTitle" required>
+                <label>Is Active: <input type="checkbox" id="editCourseIsActive"></label>
+                <button type="button" id="saveBtnFromList">Save Course</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="dataList">
+        <form id="pForm">
+            <table id="coursesTable" class="display nowrap" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Edit</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>URL</th>
+                        <th>Rating</th>
+                        <th>NumOfReviews</th>
+                        <th>Last Updated</th>
+                        <th>Instructor ID</th>
+                        <th>Image</th>
+                        <th>Duration</th>
+                        <th>IsActive</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table body rows will be populated dynamically -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="editCourseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editCourseForm">
+                <input type="hidden" id="courseId">
+                <input type="hidden" id="formMode" value="edit"> <!-- New hidden input to distinguish form mode -->
+                <label>Title:</label>
+                <input type="text" id="courseTitle" required>
+                <label>Course ID:</label>
+                <input type="text" id="courseID" required> <!-- Set as required for new course -->
+                <label>Course instructor ID:</label>
+                <input type="text" id="courseInstructorId" required> <!-- Set as required for new course -->
+                <label>URL:</label>
+                <input type="text" id="courseURL" required>
+                <label>Duration:</label>
+                <input type="text" id="courseDuration" required>
+                <label>Rating:</label>
+                <input type="text" id="courseRating" readonly>
+                <label>Number of reviews:</label>
+                <input type="text" id="courseReviews" readonly>
+                <label>Image Reference:</label>
+                <input type="text" id="courseImageReference">
+                <label for="courseImageUpload">Or Upload Image:</label>
+                <input type="file" id="courseImageUpload">
+                <input type="hidden" id="courseImageReference" name="courseImageReference">
+                <button type="submit">Save Course</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="course-list"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>-->
+    <!--<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>-->
+    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+
+    <script src="JS/Adminjs.js"></script>
+
+</body>
+</html>

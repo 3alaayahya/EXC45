@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="ajaxCalls.js"></script>
+    <link href="css/index_myCoursescss.css" rel="stylesheet" />
+    <!--<script src="JS/index.js"></script>-->
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="instructorsPage.html">instructors</a>
+        <a href="#" id="logoutBtn">Logout</a>
+        <a href="#" id="adminPage">Admin</a>
+        <p id="hiUser"></p>
+    </div>
+
+    <div id="searchbar">
+        <div class="search-section" id="duration-section">
+            <label for="min-duration">Min Duration (hours):</label>
+            <input type="number" id="min-duration" name="min-duration">
+            <label for="max-duration">Max Duration (hours):</label>
+            <input type="number" id="max-duration" name="max-duration">
+            <button id="fetch-by-duration">Get Courses by Duration Range</button><br />
+        </div>
+
+        <div class="search-section" id="rating-section">
+            <label for="min-rating">Min Rating:</label>
+            <select id="min-rating" name="min-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="max-rating">Max Rating:</label>
+            <select id="max-rating" name="max-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button id="fetch-by-rating">Get Courses by Rating Range</button><br />
+        </div>
+
+        <div class="search-section" id="delete-section">
+            <label for="delete-id">Delete by ID:</label>
+            <input type="number" id="delete-id" name="delete-id">
+            <button id="delete-by-id">Delete Course by ID</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <div id="my-courses-list"></div>
+
+    <script src="JS/myCoursesjs.js"></script>
+</body>
+</html>
